@@ -1,7 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Playpen+Sans+Hebrew:100,200,300,regular,500,600,700,800);
+
 main {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   flex-direction: column;
+}
+h2 {
+  margin-bottom: 0.5rem;
+  font-family: playpen sans hebrew;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-family: playpen sans hebrew;
+  font-size: 3rem;
 }
