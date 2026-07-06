@@ -1,8 +1,9 @@
-let cash = getElementById("cash");
-let displayCashDue = getElementById("change-due");
-let purchaseBtn = getElementById("purchase-btn");
-let displayCid = getElementById("cash-in-drawer");
-let price = getElementById("price");
+let cash = document.getElementById("cash");
+let displayCashDue =
+  document.getElementById("change-due") || document.getElementById("Change");
+let purchaseBtn = document.getElementById("purchase-btn");
+let displayCid = document.getElementById("cash-in-drawer");
+let price = document.getElementById("price");
 let cid = [
   ["PENNY", 1.01],
   ["NICKEL", 2.05],
@@ -94,7 +95,7 @@ function displayCashInDrawer() {
   displayCid.innerHTML = cashInDrawer.join("<br>");
 }
 
-window.onload = displayCashInDrawer();
+window.addEventListener("load", displayCashInDrawer);
 
 purchaseBtn.addEventListener("click", checkCashRegister);
 
