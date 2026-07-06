@@ -1,6 +1,5 @@
 let cash = document.getElementById("cash");
-let displayCashDue =
-  document.getElementById("change-due") || document.getElementById("Change");
+let displayCashDue = document.getElementById("Change");
 let purchaseBtn = document.getElementById("purchase-btn");
 let displayCid = document.getElementById("cash-in-drawer");
 let price = document.getElementById("price");
