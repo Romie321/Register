@@ -2,6 +2,7 @@ let cash = getElementById("cash");
 let displayCashDue = getElementById("change-due");
 let purchaseBtn = getElementById("purchase-btn");
 let displayCid = getElementById("cash-in-drawer");
+let price = getElementById("price");
 
 let currencyUnits = [
   ["PENNY", 1],
@@ -50,7 +51,10 @@ function checkCashRegister(price, cash, cid) {
     });
 
     if (isRegisterEmpty) {
-      return { status: "CLOSED", change: cid };
+      return (displayCashDue.innerHTML = JSON.stringify({
+        status: "CLOSED",
+        change: cid,
+      }));
     } else {
       let changeArray = [];
       Object.keys(cashToGive).map((moneyType) => {
@@ -58,10 +62,16 @@ function checkCashRegister(price, cash, cid) {
           changeArray.push([moneyType, cashToGive[moneyType] / 100]);
         }
       });
-      return { status: "OPEN", change: changeArray };
+      return (displayCashDue.innerHTML = JSON.stringify({
+        status: "OPEN",
+        change: changeArray,
+      }));
     }
   }
-  return { status: "INSUFFICIENT_FUNDS", change: [] };
+  return (displayCashDue.innerHTML = JSON.stringify({
+    status: "INSUFFICIENT_FUNDS",
+    change: [],
+  }));
 }
 
 //console.log(checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]));
