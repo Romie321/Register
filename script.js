@@ -65,10 +65,7 @@ function checkCashRegister(price, cash, cid) {
     });
 
     if (isRegisterEmpty) {
-      result = JSON.stringify({
-        status: "CLOSED",
-        change: cid,
-      });
+      result = `Status: CLOSED, Change: ${JSON.stringify(cid)}`;
     } else {
       let changeArray = [];
       Object.keys(cashToGive).forEach((moneyType) => {
@@ -76,16 +73,10 @@ function checkCashRegister(price, cash, cid) {
           changeArray.push([moneyType, cashToGive[moneyType] / 100]);
         }
       });
-      result = JSON.stringify({
-        status: "OPEN",
-        change: changeArray,
-      });
+      result = `Status: OPEN, Change: ${JSON.stringify(changeArray)}`;
     }
   } else {
-    result = JSON.stringify({
-      status: "INSUFFICIENT_FUNDS",
-      change: [],
-    });
+    result = "Status: INSUFFICIENT_FUNDS, Change: []";
   }
 
   cashResult.textContent = result;
