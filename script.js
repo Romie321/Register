@@ -1,5 +1,5 @@
 let cash = document.getElementById("cash");
-let displayCashDue = document.getElementById("Change");
+let cashResult = document.getElementById("Change");
 let purchaseBtn = document.getElementById("purchase-btn");
 let displayCid = document.getElementById("cash-in-drawer");
 let price = document.getElementById("price");
@@ -62,7 +62,7 @@ function checkCashRegister(price, cash, cid) {
     });
 
     if (isRegisterEmpty) {
-      return (displayCashDue.innerHTML = JSON.stringify({
+      return (cashResult.innerHTML = JSON.stringify({
         status: "CLOSED",
         change: cid,
       }));
@@ -73,13 +73,13 @@ function checkCashRegister(price, cash, cid) {
           changeArray.push([moneyType, cashToGive[moneyType] / 100]);
         }
       });
-      return (displayCashDue.innerHTML = JSON.stringify({
+      return (cashResult.innerHTML = JSON.stringify({
         status: "OPEN",
         change: changeArray,
       }));
     }
   }
-  return (displayCashDue.innerHTML = JSON.stringify({
+  return (cashResult.innerHTML = JSON.stringify({
     status: "INSUFFICIENT_FUNDS",
     change: [],
   }));
