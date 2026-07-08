@@ -3,6 +3,7 @@ let cashResult = document.getElementById("Change");
 let purchaseBtn = document.getElementById("purchase-btn");
 let displayCid = document.getElementById("cash-in-drawer");
 let price = document.getElementById("price");
+let clearBtn = document.getElementById("clear-btn");
 let cid = [
   ["PENNY", 1.01],
   ["NICKEL", 2.05],
