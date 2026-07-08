@@ -9,10 +9,25 @@
   <body>
     <main>
       <h1>Cash Register</h1>
-      <input autocomplete="off" type="text" id="cash" />
+      <input
+        autocomplete="off"
+        number
+        type="text"
+        id="price"
+        placeholder="Enter Price"
+      />
+      <br />
+      <input
+        autocomplete="off"
+        type="text"
+        id="cash"
+        placeholder="Enter Cash received"
+      />
       <br />
       <button id="purchase-btn">Purchase</button>
-      <p id="price">Price: $19.50</p>
+      <br />
+      <button id="clear-btn">Clear</button>
+      <h2>Result:</h2>
       <p id="Change"></p>
       <h2>Cash in Drawer:</h2>
       <div id="cash-in-drawer"></div>
