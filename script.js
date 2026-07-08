@@ -113,3 +113,8 @@ cash.addEventListener("keydown", (e) => {
     handlePurchase();
   }
 });
+
+clearBtn.addEventListener("click", () => {
+  cash.value = "";
+  cashResult.textContent = "Enter an amount and click Purchase.";
+});
