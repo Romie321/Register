@@ -1,50 +1,64 @@
 # 💵 Cash Register
-A JavaScript project built for the FreeCodeCamp JavaScript Algorithms and Data Structures Certification. This cash register algorithm calculates change, handles currency denominations, and returns the correct status based on the cash drawer contents.
+A JavaScript-based cash register application that calculates change using real currency denominations. This project focuses on algorithmic problem‑solving, clean logic, and practical UI structure.
 
-## 🧠 What This Project Does
-- Calculates the correct change for a transaction
+## 📌 Project Overview
+The Cash Register project simulates how a real cash drawer returns change based on the purchase price, cash provided, and the available money in the drawer. It determines:
 
-- Determines whether the cash register should return:
+- Whether exact change can be returned
 
-- "OPEN" — change can be provided
+- How much change to give back
 
-- "CLOSED" — exact change empties the drawer
+- Which denominations to use
 
-- "INSUFFICIENT_FUNDS" — not enough money to make change
+- Whether the drawer should remain open or close
 
-- Works with all required US currency denominations
+This project helped strengthen my understanding of JavaScript logic, arrays, objects, and conditional flow.
 
-- Passes all FreeCodeCamp test requirements for the Cash Register project
+## 🧰 Features
+- Calculates change using real U.S. currency denominations
 
-## 🛠️ Tech Used
-- JavaScript — full implementation of the cash register logic
+- Determines drawer status: "OPEN", "CLOSED", or "INSUFFICIENT_FUNDS"
 
-## 📂 Files in This Repo
-- script.js — main cash register algorithm
+- Clean, readable JavaScript logic
 
-- README.md — project documentation
+- Simple UI for entering purchase amount and cash provided
 
-- LICENSE — MIT License
+- Responsive layout
 
-## 🎯 Purpose of This Project
-This project helped me practice:
+- Realistic cash drawer simulation
 
-- Working with arrays, objects, and structured data
+## 🖥️ Technologies Used
+- HTML5
 
-- Implementing algorithmic logic with multiple conditions
+- CSS3
 
-- Handling floating‑point precision issues in JavaScript
+- JavaScript (ES6+)
 
-- Building clean, test‑driven solutions for real‑world scenarios
+## 🚀 Live Demo
+View the project here:
+https://romie321.github.io/Register/  
 
-## 🚀 Future Improvements (Optional)
-- Add a UI to simulate purchases and display change
+## 📂 How to Run Locally
+Clone the repository:
 
-- Add currency formatting for cleaner output
+bash
+git clone https://github.com/Romie321/Register.git
+Open the project folder.
 
-- Add unit tests using Jest
+Open index.html in your browser.
 
-- Add support for additional currencies or custom denominations
+## 🔧 Future Improvements
+- Add animations or transitions
 
-## 📜 License
-This project is licensed under the MIT License.
+- Improve UI styling
+
+- Add error messages for invalid inputs
+
+- Add a breakdown showing how change was calculated
+
+- Add unit tests for the change‑calculation function
+
+## 👤 Author
+Ramiro Aguilera  
+Software & Web Developer
+Always learning, always building.
